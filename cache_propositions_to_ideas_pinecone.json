@@ -1,0 +1,514 @@
+[
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Chunking in LLM applications helps improve efficiency and accuracy",
+                "Chunking in LLM applications improves search accuracy and relevance",
+                "Chunking ensures embedding content with less noise in LLM applications",
+                "Chunking helps enhance efficiency and accuracy in LLM-related applications",
+                "Chunking helps improve efficiency and accuracy in LLM-related applications",
+                "Chunking in LLM applications optimizes content relevance from a vector database",
+                "Chunking in LLM applications helps optimize content relevance from a vector database",
+                "Chunking large text pieces in LLM-application building process helps enhance content relevance",
+                "Chunking is crucial for ensuring accurate and relevant search results in LLM-related applications",
+                "Chunking is essential in optimizing the relevance of content from a vector database in LLM applications",
+                "Chunking optimizes the relevance of content from a vector database in LLM-related applications",
+                "Optimal chunk size in LLM applications improves search result accuracy"
+            ],
+            "title": "Chunking in LLM applications helps improve efficiency and accuracy",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Chunking Strategies for LLM Applications | Pinecone\nChunking Strategies for LLM Applications\nIn the context of building LLM-related applications, chunking is the process of breaking down large pieces of text into smaller segments. It\u2019s an essential technique that helps optimize the relevance of the content we get back from a vector database once we use the LLM to embed content. In this blog post, we\u2019ll explore if and how it helps improve efficiency and accuracy in LLM-related applications.\nAs we know, any content that we index in Pinecone needs to be embedded first. The main reason for chunking is to ensure we\u2019re embedding a piece of content with as little noise as possible that is still semantically relevant.\nFor example, in semantic search, we index a corpus of documents, with each document containing valuable information on a specific topic. By applying an effective chunking strategy, we can ensure our search results accurately capture the essence of the user\u2019s query. If our chunks are too small or too large, it may lead to imprecise search results or missed opportunities to surface relevant content. As a rule of thumb, if the chunk of text makes sense without the surrounding context to a human, it will make sense to the language model as well. Therefore, finding the optimal chunk size for the documents in the corpus is crucial to ensuring that the search results are accurate and relevant.",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 0
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Chunking optimizes the relevance of content in LLM applications",
+                "Chunking optimizes the relevance of content in LLM-related applications",
+                "Chunking\" optimizes the relevance of content in LLM-related applications"
+            ],
+            "title": "Chunking optimizes the relevance of content in LLM applications",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 5
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Optimal chunk size ensures accuracy of semantic search results",
+                "Optimal chunk size is crucial for accurate semantic search results",
+                "Chunk size in semantic search affects the accuracy of search results",
+                "Optimal chunk size in semantic search influences search result accuracy",
+                "An optimal chunk size enhances search result accuracy in semantic search",
+                "Chunk size affects the accuracy and relevancy of semantic search results",
+                "Optimal chunk size in semantic search ensures accurate and relevant results",
+                "Chunking size significantly influences the accuracy of semantic search results",
+                "Finding the optimal chunk size is crucial for accurate semantic search results",
+                "Finding the optimal chunk size is crucial for accurate and relevant search results",
+                "The chunk size is essential for ensuring accurate search results in semantic search",
+                "The right chunking strategy improves semantic search results' accuracy and relevancy",
+                "Determining the optimal chunk size contributes to accurate and relevant search results",
+                "Optimal chunk size is crucial for accurate and relevant search results in semantic search"
+            ],
+            "title": "Optimal chunk size ensures accuracy of semantic search results",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "For example, in semantic search, we index a corpus of documents, with each document containing valuable information on a specific topic. By applying an effective chunking strategy, we can ensure our search results accurately capture the essence of the user\u2019s query. If our chunks are too small or too large, it may lead to imprecise search results or missed opportunities to surface relevant content. As a rule of thumb, if the chunk of text makes sense without the surrounding context to a human, it will make sense to the language model as well. Therefore, finding the optimal chunk size for the documents in the corpus is crucial to ensuring that the search results are accurate and relevant.\nAnother example is conversational agents (which we covered before using Python and Javascript). We use the embedded chunks to build the context for the conversational agent based on a knowledge base that grounds the agent in trusted information. In this situation, it\u2019s important to make the right choice about our chunking strategy for two reasons: First, it will determine whether the context is actually relevant to our prompt. Second, it will determine whether or not we\u2019ll be able to fit the retrieved text into the context before sending it to an outside model provider (e.g., OpenAI), given the limitations on the number of tokens we can send for each request. In some cases, like when using GPT-4 with a 32k context window, fitting the chunks might not be an issue. Still, we need to be mindful of when we\u2019re using very big chunks, as this may adversely affect the relevancy of the results we get back from Pinecone.\nIn this post, we\u2019ll explore several chunking methods and discuss the tradeoffs you should think about when choosing a chunking size and method. Finally, we\u2019ll give some recommendations for determining the best chunk size and method that will be appropriate for your application.\nEmbedding short and long content",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 1
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Embedding a sentence can miss out on broader contextual information",
+                "Embedding a longer text can dilute the significance of individual sentences",
+                "Embedding processes for sentences tend to miss broader contextual information",
+                "Sentence embeddings might miss broader contextual information present in the text",
+                "Embedding a full document captures broader meaning and themes than sentence embedding",
+                "Embedding a full paragraph or document allows for a more comprehensive vector representation",
+                "Embedding a full paragraph or document considers both contextual and interphrase relationships",
+                "Sentence embeddings may miss out on broader contextual information found in a paragraph or document"
+            ],
+            "title": "Embedding a sentence can miss out on broader contextual information",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Embedding short and long content\nWhen we embed our content, we can anticipate distinct behaviors depending on whether the content is short (like sentences) or long (like paragraphs or entire documents).\nWhen a sentence is embedded, the resulting vector focuses on the sentence\u2019s specific meaning. The comparison would naturally be done on that level when compared to other sentence embeddings. This also implies that the embedding may miss out on broader contextual information found in a paragraph or document.\nWhen a full paragraph or document is embedded, the embedding process considers both the overall context and the relationships between the sentences and phrases within the text. This can result in a more comprehensive vector representation that captures the broader meaning and themes of the text. Larger input text sizes, on the other hand, may introduce noise or dilute the significance of individual sentences or phrases, making finding precise matches when querying the index more difficult.\nThe length of the query also influences how the embeddings relate to one another. A shorter query, such as a single sentence or phrase, will concentrate on specifics and may be better suited for matching against sentence-level embeddings. A longer query that spans more than one sentence or a paragraph may be more in tune with embeddings at the paragraph or document level because it is likely looking for broader context or themes.",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 2
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Embedding longer text may dilute the significance of individual sentences",
+                "Embedding long content may dilute the significance of individual sentences",
+                "Embedding larger text sizes may dilute the significance of individual sentences",
+                "Embedding longer content may introduce noise and dilute the significance of individual sentences",
+                "Longer queries are likely more suited for embeddings at the paragraph level",
+                "The length of a query influences how embeddings relate to one another"
+            ],
+            "title": "Embedding longer text may dilute the significance of individual sentences",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 18
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Embedding long content results in more comprehensive vector representations"
+            ],
+            "title": "Embedding long content results in more comprehensive vector representations",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 18
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "A shorter query is better suited for sentence-level embeddings",
+                "Longer queries tend to align with paragraph or document-level embeddings",
+                "A longer query matches better with paragraph or document level embeddings",
+                "Longer queries are more in tune with paragraph- or document-level embeddings",
+                "A shorter query is better suited for matching against sentence-level embeddings",
+                "A shorter query may be better suited for matching with sentence-level embeddings",
+                "Shorter queries are better suited for matching against sentence-level embeddings",
+                "Shorter queries may be better suited for matching with sentence-level embeddings",
+                "A shorter query may be better suited for matching against sentence-level embeddings",
+                "The length of a query influences its match with different levels of embeddings",
+                "The length of the query influences better suitability for matching against sentence-level or paragraph-level embeddings"
+            ],
+            "title": "A shorter query is better suited for sentence-level embeddings",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "The length of the query also influences how the embeddings relate to one another. A shorter query, such as a single sentence or phrase, will concentrate on specifics and may be better suited for matching against sentence-level embeddings. A longer query that spans more than one sentence or a paragraph may be more in tune with embeddings at the paragraph or document level because it is likely looking for broader context or themes.\nThe index may also be non-homogeneous and contain embeddings for chunks of varying sizes. This may pose challenges in terms of query result relevance, but it may also have some positive consequences. On the one hand, the relevance of the query result may fluctuate because of discrepancies between the semantic representations of long and short content. On the other, a non-homogeneous index could potentially capture a wider range of context and information since different chunk sizes represent different levels of granularity in the text. This could accommodate different types of queries more flexibly.\nChunking Considerations\nSeveral variables play a role in determining the best chunking strategy, and these variables vary depending on the use case. Here are some key aspects to keep in mind:",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 3
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "A non-homogeneous index could potentially capture a wider range of context and information"
+            ],
+            "title": "A non-homogeneous index could potentially capture a wider range of context and information",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 29
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Different variables determine the best chunking strategy depending on the use case",
+                "The chunking strategy can be influenced by the nature of the content being indexed",
+                "The chunking strategy may depend on the nature of the content being indexed",
+                "The embedding model used dictates the optimal chunk sizes for text processing",
+                "The nature of content being indexed affects the suitable chunking strategy",
+                "The nature of the content being indexed influences the chunking strategy",
+                "The nature of the content informs the suitable chunking strategy",
+                "The type of content being indexed impacts the choice of chunking strategy",
+                "The use case determines the best chunking strategy"
+            ],
+            "title": "Different variables determine the best chunking strategy depending on the use case",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Several variables play a role in determining the best chunking strategy, and these variables vary depending on the use case. Here are some key aspects to keep in mind:\nWhat is the nature of the content being indexed? Are you working with long documents, such as articles or books, or shorter content, like tweets or instant messages? The answer would dictate both which model would be more suitable for your goal and, consequently, what chunking strategy to apply.\nWhich embedding model are you using, and what chunk sizes does it perform optimally on? For instance, sentence-transformer models work well on individual sentences, but a model like text-embedding-ada-002 performs better on chunks containing 256 or 512 tokens.\nWhat are your expectations for the length and complexity of user queries? Will they be short and specific or long and complex? This may inform the way you choose to chunk your content as well so that there\u2019s a closer correlation between the embedded query and embedded chunks.\nHow will the retrieved results be utilized within your specific application? For example, will they be used for semantic search, question answering, summarization, or other purposes? For example, if your results need to be fed into another LLM with a token limit, you\u2019ll have to take that into consideration and limit the size of the chunks based on the number of chunks you\u2019d like to fit into the request to the LLM.\nAnswering these questions will allow you to develop a chunking strategy that balances performance and accuracy, and this, in turn, will ensure the query results are more relevant.\nChunking methods\nThere are different methods for chunking, and each of them might be appropriate for different situations. By examining the strengths and weaknesses of each method, our goal is to identify the right scenario to apply them to.\nFixed-size chunking",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 4
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "The embedding model used dictates the optimal chunk sizes for indexing",
+                "The performance of different embedding models varies depending on the chunk sizes",
+                "The size of chunks in chunking strategy depend on the type of embedding model used"
+            ],
+            "title": "The embedding model used dictates the optimal chunk sizes for indexing",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 37
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Sentence-transformer models work well on individual sentences",
+                "Sentence-transformer models perform optimally on individual sentences"
+            ],
+            "title": "Sentence-transformer models work well on individual sentences",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 37
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "The text-embedding-ada-002 model performs better on chunks containing 256 or 512 tokens"
+            ],
+            "title": "The text-embedding-ada-002 model performs better on chunks containing 256 or 512 tokens",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 37
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Fixed-sized chunking is computationally cheap and simple",
+                "Fixed-sized chunking is computationally cheap and simple to use",
+                "Fixed-sized chunking is computationally cheap and straightforward",
+                "Fixed-sized chunking is cheaper and simpler than \"content-aware\" chunking",
+                "Fixed-size chunking is computationally cheaper than \"content-aware\" chunking",
+                "Fixed-size chunking is computationally cheaper and simpler than content-aware chunking",
+                "Fixed-size chunking is the most common, inexpensive, and simple text splitting approach",
+                "Fixed-sized chunking is computationally cheaper than \"Content-aware\" chunking"
+            ],
+            "title": "Fixed-sized chunking is computationally cheap and simple",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Fixed-size chunking\nThis is the most common and straightforward approach to chunking: we simply decide the number of tokens in our chunk and, optionally, whether there should be any overlap between them. In general, we will want to keep some overlap between chunks to make sure that the semantic context doesn\u2019t get lost between chunks. Fixed-sized chunking will be the best path in most common cases. Compared to other forms of chunking, fixed-sized chunking is computationally cheap and simple to use since it doesn\u2019t require the use of any NLP libraries.\nHere\u2019s an example for performing fixed-sized chunking with LangChain:\ntext = \"...\" # your text from langchain.text_splitter import CharacterTextSplitter text_splitter = CharacterTextSplitter( separator = \"\\n\\n\", chunk_size = 256, chunk_overlap = 20 ) docs = text_splitter.create_documents([text])\n\u201cContent-aware\u201d Chunking\nThese are a set of methods for taking advantage of the nature of the content we\u2019re chunking and applying more sophisticated chunking to it. Here are some examples:\nSentence splitting\nAs we mentioned before, many models are optimized for embedding sentence-level content. Naturally, we would use sentence chunking, and there are several approaches and tools available to do this, including:\nNaive splitting: The most naive approach would be to split sentences by periods (\u201c.\u201d) and new lines. While this may be fast and simple, this approach would not take into account all possible edge cases. Here\u2019s a very simple example:\ntext = \"...\" # your text docs = text.split(\".\")\nNLTK: The Natural Language Toolkit (NLTK) is a popular Python library for working with human language data. It provides a sentence tokenizer that can split the text into sentences, helping to create more meaningful chunks. For example, to use NLTK with LangChain, you can do the following:\ntext = \"...\" # your text from langchain.text_splitter import NLTKTextSplitter text_splitter = NLTKTextSplitter() docs = text_splitter.split_text(text)",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 5
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Fixed-size chunking doesn't require the use of any NLP libraries",
+                "Fixed-size chunking is computationally cheap and simple to use",
+                "Fixed-size chunking is computationally cheap and straightforward to use"
+            ],
+            "title": "Fixed-size chunking doesn't require the use of any NLP libraries",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 51
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Fixed-sized chunking is more computationally efficient than content-aware chunking"
+            ],
+            "title": "Fixed-sized chunking is more computationally efficient than content-aware chunking",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 51
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "The NLTK library can split text into sentences for more meaningful chunks"
+            ],
+            "title": "The NLTK library can split text into sentences for more meaningful chunks",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 51
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "spaCy can efficiently divide the text into separate sentences",
+                "SpaCy allows efficient sentence segmentation in Python for NLP tasks",
+                "spaCy library offers sophisticated sentence segmentation for NLP tasks",
+                "SpaCy offers a sophisticated sentence segmentation feature for NLP tasks",
+                "Spacy offers a sophisticated sentence segmentation feature for NLP tasks",
+                "spaCy offers a sophisticated sentence segmentation feature for NLP tasks",
+                "spaCy offers sentence segmentation feature for better context preservation",
+                "spaCy provides a sophisticated sentence segmentation feature for NLP tasks",
+                "spaCy's sentence segmentation feature efficiently divides text into separate sentences",
+                "spaCy provides sophisticated sentence segmentation for natural language processing tasks"
+            ],
+            "title": "spaCy can efficiently divide the text into separate sentences",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "text = \"...\" # your text from langchain.text_splitter import NLTKTextSplitter text_splitter = NLTKTextSplitter() docs = text_splitter.split_text(text)\nspaCy: spaCy is another powerful Python library for NLP tasks. It offers a sophisticated sentence segmentation feature that can efficiently divide the text into separate sentences, enabling better context preservation in the resulting chunks. For example, to use spaCy with LangChain, you can do the following:\ntext = \"...\" # your text from langchain.text_splitter import SpacyTextSplitter text_splitter = SpaCyTextSplitter() docs = text_splitter.split_text(text)\nRecursive Chunking\nRecursive chunking divides the input text into smaller chunks in a hierarchical and iterative manner using a set of separators. If the initial attempt at splitting the text doesn\u2019t produce chunks of the desired size or structure, the method recursively calls itself on the resulting chunks with a different separator or criterion until the desired chunk size or structure is achieved. This means that while the chunks aren\u2019t going to be exactly the same size, they\u2019ll still \u201caspire\u201d to be of a similar size.\nHere\u2019s an example of how to use recursive chunking with LangChain:\ntext = \"...\" # your text from langchain.text_splitter import RecursiveCharacterTextSplitter text_splitter = RecursiveCharacterTextSplitter( # Set a really small chunk size, just to show. chunk_size = 256, chunk_overlap = 20 ) docs = text_splitter.create_documents([text])\nSpecialized chunking\nMarkdown and LaTeX are two examples of structured and formatted content you might run into. In these cases, you can use specialized chunking methods to preserve the original structure of the content during the chunking process.",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 6
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Recursive chunking divides text into smaller chunks in a hierarchical, iterative manner",
+                "Recursive chunking divides text into smaller, similarly sized chunks"
+            ],
+            "title": "Recursive chunking divides text into smaller chunks in a hierarchical, iterative manner",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 65
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "SpaCy's sentence segmentation feature allows for better context preservation"
+            ],
+            "title": "SpaCy's sentence segmentation feature allows for better context preservation",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 65
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "spaCy is a powerful Python library for NLP tasks"
+            ],
+            "title": "spaCy is a powerful Python library for NLP tasks",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 65
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Markdown and LaTeX content can utilize specialized chunking methods",
+                "Markdown and LaTeX use specialized chunking methods for formatted content",
+                "Markdown and LaTeX content can be divided using specialized chunking methods",
+                "Markdown and LaTeX use specialized chunking methods to preserve content structure",
+                "Markdown and LaTeX can use specialized chunking methods during the chunking process",
+                "Markdown and LaTeX have specialized chunking methods for preserving content structure",
+                "Markdown and LaTeX use specialized chunking methods to maintain the original content structure",
+                "Markdown and LaTeX use specialized chunking methods to preserve original content structure"
+            ],
+            "title": "Markdown and LaTeX content can utilize specialized chunking methods",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Markdown and LaTeX are two examples of structured and formatted content you might run into. In these cases, you can use specialized chunking methods to preserve the original structure of the content during the chunking process.\nMarkdown: Markdown is a lightweight markup language commonly used for formatting text. By recognizing the Markdown syntax (e.g., headings, lists, and code blocks), you can intelligently divide the content based on its structure and hierarchy, resulting in more semantically coherent chunks. For example:\nfrom langchain.text_splitter import MarkdownTextSplitter markdown_text = \"...\" markdown_splitter = MarkdownTextSplitter(chunk_size=100, chunk_overlap=0) docs = markdown_splitter.create_documents([markdown_text])\nLaTex: LaTeX is a document preparation system and markup language often used for academic papers and technical documents. By parsing the LaTeX commands and environments, you can create chunks that respect the logical organization of the content (e.g., sections, subsections, and equations), leading to more accurate and contextually relevant results. For example:\nfrom langchain.text_splitter import LatexTextSplitter latex_text = \"...\" latex_splitter = LatexTextSplitter(chunk_size=100, chunk_overlap=0) docs = latex_splitter.create_documents([latex_text])\nFiguring out the best chunk size for your application\nHere are some pointers to help you come up with an optimal chunk size if the common chunking approaches, like fixed chunking, don\u2019t easily apply to your use case.",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 7
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Markdown is used for formatting text",
+                "Markdown is commonly used for formatting text",
+                "Markdown is a lightweight markup language used for formatting text"
+            ],
+            "title": "Markdown is used for formatting text",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 79
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "LaTeX is often used for academic papers and technical documents"
+            ],
+            "title": "LaTeX is often used for academic papers and technical documents",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 79
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Preprocessing data is crucial before determining the best chunk size",
+                "Preprocessing data is necessary before determining optimal chunk size",
+                "Data preprocessing assures quality before determining optimal chunk size",
+                "Determine the best chunk size requires preprocessing and evaluating data",
+                "Optimal chunk size determination involves pre-processing your data first",
+                "Pre-processing data is necessary before determining the optimal chunk size",
+                "Preprocessing data ensures quality before determining an optimal chunk size",
+                "Preprocessing your data ensures quality before determining the best chunk size",
+                "Determining the optimal chunk size is a process that requires data preprocessing",
+                "Determining optimal chunk size requires pre-processing and evaluating the performance of each size",
+                "Determining the optimal chunk size requires preprocessing, selecting a range, and evaluating performance",
+                "Determining the optimal chunk size involves preprocessing data, selecting a range of sizes, and evaluating performance"
+            ],
+            "title": "Preprocessing data is crucial before determining the best chunk size",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Here are some pointers to help you come up with an optimal chunk size if the common chunking approaches, like fixed chunking, don\u2019t easily apply to your use case.\nPreprocessing your Data - You need to first pre-process your data to ensure quality before determining the best chunk size for your application. For example, if your data has been retrieved from the web, you might need to remove HTML tags or specific elements that just add noise.\nSelecting a Range of Chunk Sizes - Once your data is preprocessed, the next step is to choose a range of potential chunk sizes to test. As mentioned previously, the choice should take into account the nature of the content (e.g., short messages or lengthy documents), the embedding model you\u2019ll use, and its capabilities (e.g., token limits). The objective is to find a balance between preserving context and maintaining accuracy. Start by exploring a variety of chunk sizes, including smaller chunks (e.g., 128 or 256 tokens) for capturing more granular semantic information and larger chunks (e.g., 512 or 1024 tokens) for retaining more context.\nEvaluating the Performance of Each Chunk Size - In order to test various chunk sizes, you can either use multiple indices or a single index with multiple namespaces. With a representative dataset, create the embeddings for the chunk sizes you want to test and save them in your index (or indices). You can then run a series of queries for which you can evaluate quality, and compare the performance of the various chunk sizes. This is most likely to be an iterative process, where you test different chunk sizes against different queries until you can determine the best-performing chunk size for your content and expected queries.\nConclusion",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 8
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "Removing HTML tags can help ensure data quality before determining chunk size"
+            ],
+            "title": "Removing HTML tags can help ensure data quality before determining chunk size",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 90
+                }
+            ]
+        },
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "The choice of chunk size should balance preserving context and maintaining accuracy"
+            ],
+            "title": "The choice of chunk size should balance preserving context and maintaining accuracy",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/id": 90
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "py/object": "ideas.Idea",
+            "alternative_titles": [
+                "There's no universal solution to content chunking",
+                "Chunking content is not a one-size-fits-all solution",
+                "Chunking content may present challenges in certain cases",
+                "Chunking content may present challenges in uncommon cases",
+                "Chunking content does not have a one-size-fits-all solution",
+                "Chunking content may present challenges in unusual situations",
+                "Chunking content might present challenges for unique scenarios",
+                "Chunking content may present challenges outside common scenarios",
+                "Chunking content may present challenges for unstandardized use cases",
+                "Chunking content may pose challenges when not following standard methods",
+                "Chunking content may present challenges when deviating from common methods",
+                "Chunking content can present challenges when straying from common practices",
+                "Chunking content might present challenges when departing from normal methods",
+                "Chunking content may present challenges when deviating from traditional methods"
+            ],
+            "title": "There's no universal solution to content chunking",
+            "body": "",
+            "origin_chunks": [
+                {
+                    "py/object": "chunking.Chunk",
+                    "chunk": "Conclusion\nChunking your content is pretty simple in most cases - but it could present some challenges when you start wandering off the beaten path. There\u2019s no one-size-fits-all solution to chunking, so what works for one use case may not work for another. Hopefully, this post will help you get a better intuition for how to approach chunking for your application.",
+                    "doc_id": "https://www.pinecone.io/learn/chunking-strategies/",
+                    "index": 9
+                }
+            ]
+        }
+    ]
+]
